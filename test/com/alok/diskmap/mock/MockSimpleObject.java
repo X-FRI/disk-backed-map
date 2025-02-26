@@ -35,7 +35,8 @@ public class MockSimpleObject implements Serializable {
     private short h;
     private BigInteger i;
     private BigDecimal j;
-    public MockSimpleObject(){
+
+    public MockSimpleObject() {
         a = UUID.randomUUID().toString();
         b = (long) (1000000 * Math.random());
         c = (int) (1000000 * Math.random());
@@ -50,7 +51,7 @@ public class MockSimpleObject implements Serializable {
             g.add((long) (1000000 * Math.random()));
         }
         h = (short) (10000 * Math.random());
-        i = new BigInteger(String.valueOf((long)(1000000 * Math.random())));
+        i = new BigInteger(String.valueOf((long) (1000000 * Math.random())));
         j = new BigDecimal(String.valueOf(100000000 * Math.random()));
     }
 
@@ -168,7 +169,7 @@ public class MockSimpleObject implements Serializable {
         if (i != null ? !i.equals(that.i) : that.i != null) {
             return false;
         }
-        if (j != null ? (j.compareTo(that.j) != 0 ): that.j != null) {
+        if (j != null ? (j.compareTo(that.j) != 0) : that.j != null) {
             return false;
         }
 

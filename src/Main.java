@@ -1,5 +1,3 @@
-package com.alok.diskmap.cli;
-
 import com.alok.diskmap.DiskBackedMap;
 import org.mortbay.jetty.Server;
 import org.mortbay.jetty.servlet.Context;

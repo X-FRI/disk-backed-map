@@ -22,16 +22,15 @@ import java.io.File;
 
 public class PageTest extends TestCase {
     public void testLookup(){
-        Page<String,String> page = new Page<String, String>(new File("/home/alok/sw_dev/tmp"), 1);
-        int count = 5000;
+        Page<String,String> page = new Page<String, String>(new File("/tmp"), 100);
+        int count = 500000;
         for(int i = 0; i < count; i++){
             page.save("key" + i, "value" + i );
         }
         for(int i = 0; i < count; i++){
-            int key = (int)(Math.random() * count);
-            String value = page.load("key" + key);
-            System.out.println(String.format("Key[%s], Value[%s]", "key" + key, value));
-            assertEquals("value" + key,  value);
+            String value = page.load("key" + i);
+            System.out.printf("Key[%s], Value[%s]%n", "key" + i, value);
+            assertEquals("value" + i,  value);
         }
     }
 }

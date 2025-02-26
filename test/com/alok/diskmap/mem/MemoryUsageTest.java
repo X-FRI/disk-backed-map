@@ -18,7 +18,6 @@ package com.alok.diskmap.mem;
 
 import com.alok.diskmap.Configuration;
 import com.alok.diskmap.DiskBackedMap;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import junit.framework.TestCase;
 import org.junit.Test;
 
